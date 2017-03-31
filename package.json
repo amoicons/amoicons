@@ -1,0 +1,9 @@
+{
+  "name": "amoicons",
+  "version": "0.0.0",
+  "description": "A set of pixel aligned icons ready to use for developers and designers.",
+  "main": "index.js",
+  "repository": "https://github.com/amoicons/amoicons",
+  "author": "Zhe Zhang (https://github.com/zhe)",
+  "license": "MIT"
+}

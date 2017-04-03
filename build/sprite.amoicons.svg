@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg"><symbol id="ban" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-6.33-5.116A8.001 8.001 0 0 1 16.898 5.658L5.67 16.884zm1.371 1.458L18.267 7.116A8.001 8.001 0 0 1 7.041 18.342z"/>
+</symbol><symbol id="home" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" d="M12 2L1 12h3v10h16V12h3l-4-3.636V4h-3v1.636L12 2zm2 18h4v-9.843l-6-5.454-6 5.454V20h4v-5h4v5z"/>
+</symbol><symbol id="three-bars" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" d="M4 4h16v2H4V4zm0 7h16v2H4v-2zm0 7h16v2H4v-2z"/>
+</symbol><symbol id="x" viewBox="0 0 24 24">
+    <path fill-rule="evenodd" d="M12 10.586L6.343 4.929 4.929 6.343 10.586 12l-5.657 5.657 1.414 1.414L12 13.414l5.657 5.657 1.414-1.414L13.414 12l5.657-5.657-1.414-1.414z"/>
+</symbol></svg>

@@ -14,13 +14,22 @@ gulp.task('clean', function() {
 });
 
 gulp.task('svg', ['clean'], function() {
+  const config = {
+    svgmin: {
+      plugins: [
+        { removeAttrs: { attrs: ['id', 'class', 'data-name', 'fill'] } },
+        { sortAttrs: true },
+        { removeTitle: true },
+      ],
+    },
+  };
+
   return gulp
     .src(`${SRC}/svg/*.svg`)
     .pipe(
       svgmin({
-        js2svg: {
-          pretty: true,
-        },
+        js2svg: { pretty: true },
+        plugins: config.svgmin.plugins,
       })
     )
     .pipe(gulp.dest(`${DEST}/svg/`))

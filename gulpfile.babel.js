@@ -1,5 +1,7 @@
 import babel from 'gulp-babel';
 import del from 'del';
+import fs from 'fs';
+import path from 'path';
 import gulp from 'gulp';
 import rename from 'gulp-rename';
 import svgmin from 'gulp-svgmin';
@@ -8,12 +10,12 @@ import svgstore from 'gulp-svgstore';
 const SRC = './lib';
 const DEST = './build';
 
-gulp.task('clean', function() {
+gulp.task('clean', () => {
   // You can use multiple globbing patterns as you would with `gulp.src`
   return del([DEST]);
 });
 
-gulp.task('svg', ['clean'], function() {
+gulp.task('svg', ['clean'], () => {
   const config = {
     svgmin: {
       plugins: [
@@ -38,4 +40,24 @@ gulp.task('svg', ['clean'], function() {
     .pipe(gulp.dest(DEST));
 });
 
-gulp.task('default', ['svg']);
+gulp.task('svg2json', ['svg'], () => {
+  let files = fs.readdirSync('./build/svg/');
+  let data = {};
+  files.forEach(function(file) {
+    let svg = fs.readFileSync(path.resolve('./build/svg', file));
+    let key = path.basename(file, '.svg');
+    let raw = svg.toString();
+
+    data[key] = {
+      path: {
+        'fill-rule': /fill-rule="(\w+)"/g.exec(raw)[1],
+        d: /d="([^"]*)"/g.exec(raw)[1],
+      },
+      height: /height="(\d+)"/g.exec(raw)[1],
+      width: /width="(\d+)"/g.exec(raw)[1],
+    };
+  });
+  fs.writeFileSync('build/data.json', JSON.stringify(data));
+});
+
+gulp.task('default', ['svg2json']);

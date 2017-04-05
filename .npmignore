@@ -1,1 +1,5 @@
 lib/
+.babelrc
+.npmignore
+gulpfile.babel.js
+yarn.lock

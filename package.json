@@ -2,10 +2,14 @@
   "name": "amoicons",
   "version": "0.0.3",
   "description": "A set of pixel aligned icons ready to use for developers and designers.",
-  "main": "index.js",
   "repository": "https://github.com/amoicons/amoicons",
   "author": "Zhe Zhang (https://github.com/zhe)",
   "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "build"
+  ],
   "scripts": {
     "build": "gulp",
     "prepublish": "npm run build"

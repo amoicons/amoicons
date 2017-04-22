@@ -15,11 +15,11 @@ gulp.task('clean', () => {
   return del([DEST]);
 });
 
-gulp.task('styles', () => {
+gulp.task('styles', ['clean'], () => {
   return gulp.src(`${SRC}/*.css`).pipe(gulp.dest(DEST));
 });
 
-gulp.task('svg', () => {
+gulp.task('svg', ['clean'], () => {
   const config = {
     svgmin: {
       plugins: [
@@ -62,4 +62,4 @@ gulp.task('svg2json', ['svg'], () => {
   fs.writeFileSync('build/data.json', JSON.stringify(data));
 });
 
-gulp.task('default', ['clean', 'styles', 'svg2json']);
+gulp.task('default', ['styles', 'svg2json']);

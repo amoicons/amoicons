@@ -15,7 +15,11 @@ gulp.task('clean', () => {
   return del([DEST]);
 });
 
-gulp.task('svg', ['clean'], () => {
+gulp.task('styles', () => {
+  return gulp.src(`${SRC}/*.css`).pipe(gulp.dest(DEST));
+});
+
+gulp.task('svg', () => {
   const config = {
     svgmin: {
       plugins: [
@@ -42,22 +46,20 @@ gulp.task('svg', ['clean'], () => {
 
 gulp.task('svg2json', ['svg'], () => {
   let files = fs.readdirSync('./build/svg/');
-  let data = {};
-  files.forEach(function(file) {
+  let data = JSON.parse(fs.readFileSync('./lib/data.json'));
+
+  files.forEach(file => {
     let svg = fs.readFileSync(path.resolve('./build/svg', file));
     let key = path.basename(file, '.svg');
-    let raw = svg.toString();
 
-    data[key] = {
-      path: {
-        'fill-rule': /fill-rule="(\w+)"/g.exec(raw)[1],
-        d: /d="([^"]*)"/g.exec(raw)[1],
-      },
-      height: /height="(\d+)"/g.exec(raw)[1],
-      width: /width="(\d+)"/g.exec(raw)[1],
-    };
+    if (data[key]) {
+      let raw = svg.toString();
+      data[key].path = /<path.+\/>/g.exec(raw)[0];
+      data[key].height = /height="(\d+)"/g.exec(raw)[1];
+      data[key].width = /width="(\d+)"/g.exec(raw)[1];
+    }
   });
   fs.writeFileSync('build/data.json', JSON.stringify(data));
 });
 
-gulp.task('default', ['svg2json']);
+gulp.task('default', ['clean', 'styles', 'svg2json']);

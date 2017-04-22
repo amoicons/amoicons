@@ -1,0 +1,22 @@
+.amoicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+.amoicon-facebook {
+  fill: #3c5a99;
+}
+
+.amoicon-linkedin {
+  fill: #0065a1;
+}
+
+.amoicon-twitter {
+  fill: #55acee;
+}
+
+.amoicon-youtube {
+  fill: #cd201f;
+}
+

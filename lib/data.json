@@ -1,0 +1,80 @@
+{
+    "ban": {
+        "keywords": [
+            "brand"
+        ]
+    },
+    "cross": {
+        "keywords": [
+            "brand"
+        ]
+    },
+    "facebook": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    },
+    "github": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    },
+    "google-plus": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    },
+    "heart": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    },
+    "home": {
+        "keywords": [
+            "brand"
+        ]
+    },
+    "instagram": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    },
+    "linkedin": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    },
+    "star": {
+        "keywords": [
+            "brand"
+        ]
+    },
+    "three-bars": {
+        "keywords": [
+            "brand"
+        ]
+    },
+    "twitter": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    },
+    "x": {
+        "keywords": [
+            "brand"
+        ]
+    },
+    "youtube": {
+        "keywords": [
+            "brand",
+            "social"
+        ]
+    }
+}

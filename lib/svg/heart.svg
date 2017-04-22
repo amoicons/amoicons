@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+<svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <title>heart</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Amoicons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="heart" fill-rule="nonzero" fill="#232323">
-            <path d="M21,10.0178237 C21,7.24663158 18.8695714,5 16.2418571,5 C14.3877143,5 12.7848571,6.12098073 12.0001429,7.75326485 C11.2148571,6.12098073 9.61242857,5.0003013 7.75814286,5.0003013 C5.13028571,5.00015065 3,7.24663158 3,10.0178237 C3,15.2596627 10.9827143,21 12.0001429,21 C13.0177143,21 21,15.2848212 21,10.0178237 Z" id="Shape"></path>
+            <path d="M19,10.0178237 C19,7.24663158 16.8695714,5 14.2418571,5 C12.3877143,5 10.7848571,6.12098073 10.0001429,7.75326485 C9.21485714,6.12098073 7.61242857,5.0003013 5.75814286,5.0003013 C3.13028571,5.00015065 1,7.24663158 1,10.0178237 C1,15.2596627 8.98271429,21 10.0001429,21 C11.0177143,21 19,15.2848212 19,10.0178237 Z" id="Shape"></path>
         </g>
     </g>
 </svg>

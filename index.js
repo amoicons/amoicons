@@ -1,3 +1,3 @@
-// var data = require('./build/data.json');
+var data = require('./build/data.json');
 
-// module.exports = data;
+module.exports = data;
